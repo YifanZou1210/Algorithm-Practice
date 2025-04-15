@@ -5,7 +5,6 @@
 # [687] 最长同值路径
 #
 
-
 # @lcpr-template-start
 
 # @lcpr-template-end
@@ -19,11 +18,6 @@ class TreeNode:
         self.val = val
         self.left = left
         self.right = right
-
-
-
-
-from typing import Optional
 
 # 解法1 : Recursion 
 class Solution1:
