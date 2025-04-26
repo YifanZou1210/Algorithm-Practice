@@ -3,7 +3,6 @@
 #
 # [733] 图像渲染
 #
-
 from collections import deque
 from typing import List
 from typing import Optional
