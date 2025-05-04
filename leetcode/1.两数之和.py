@@ -33,6 +33,6 @@ class Solution:
         self.solver = Solution_Brute_Force()  
     def __getattr__(self, name):
         return getattr(self.solver, name)
-
+# 诶嘿
 # @lc code=end
 
