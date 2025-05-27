@@ -68,7 +68,7 @@ class Solution1:
             if dict[u] == 1: return False
             if dict[u] == 2: return True
             dict[u] = 1 # 开始遍历
-            #:------ DFS内部操作： 虽然有嵌套循环，但是由于条件限制，边和顶点都只会访问一次,TC=O(1)
+        #:DFS内部操作： 虽然有嵌套循环，但是由于条件限制，边和顶点都只会访问一次,TC=O(1)
             for v in graph[u]:
                 # 在递归过程中，只要检测到一个环就能确定无法实现所有的递归
                 # 但是要实现所有的遍历才能确定是否无环，所以这里要用not dfs作为negative condition
@@ -78,7 +78,7 @@ class Solution1:
             return True # 遍历完成
         # 图不一定连通，需要对所有course递归遍历
         for i in range(numCourses):
-            #:------ DFS遍历 TC= O(V)
+            #: DFS遍历 TC= O(V)
             if dict[i] == 0:
                 if not dfs(i):
                     return False
