@@ -25,6 +25,8 @@ class Solution_2P:
                     t=nums[i]+nums[j]+nums[l]+nums[r]
                     if t==target:
                         res.append([nums[i],nums[j],nums[l],nums[r]])
+                        # 在4sum/3sum中都需要进行内层循环的l<r边界检查，当 l 已接近 r 或到达数组末尾时，l+1 可能超出合法索引范围，触发 IndexError
+                        # 同时，l<r 确保跳过重复后依然保持 l<r 的不变性，否则后续 l+=1 可能使 l 越过 r，导致在同一轮循环中误用已交换的指针位置或重复计算。
                         while l<r and nums[l]==nums[l+1]:
                             l+=1
                         while l<r and nums[r]==nums[r-1]:
